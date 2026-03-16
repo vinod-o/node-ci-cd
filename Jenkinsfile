@@ -26,11 +26,13 @@ pipeline {
             steps{
                 script{
                     echo " we need to perform static code analysis here"
+                    withSonarQubeEnv('sonarqube'){
                     sh ''' sonar-scanner \\
                         -Dsonar.projectKey=node-ci-cd \\
                         -Dsonar.sources=. \\
-                        -Dsonar.host.url= http://98.87.156.107:9000/ \\
-                        -Dsonar.login=sqa_2322cf3fbe6134f8bab1ebe1dcaae1e8a4931eaa '''
+                        -Dsonar.host.url= http://98.87.156.107:9000 \\
+                        -Dsonar.login=sqa_3be775a69344ffb4c6e99ff7fc7320de94308549 '''
+                    }
                 }
             }
         }
