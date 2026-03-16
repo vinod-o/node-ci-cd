@@ -67,6 +67,7 @@ pipeline {
         stage("sucees"){
             steps{
                 echo "build sucessfully passed"
+                echo " build NUMBER:${BUILD_NUMBER} "
             }
         }
     }
