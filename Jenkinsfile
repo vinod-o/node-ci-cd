@@ -58,7 +58,7 @@ pipeline {
                     withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]){
                         sh ' docker login -u vinod5982 -p ${dockerhub}'
                         sh 'docker push $IMAGE_NAME:${BUILD_NUMBER}'
-                        echo 'pushed suscessufully'
+                        echo 'pushed suscessufully check'
                     }
                 }
 '
