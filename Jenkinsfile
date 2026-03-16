@@ -64,5 +64,10 @@ pipeline {
 
             }
         }
+        stage("sucees"){
+            steps{
+                echo "build sucessfully passed"
+            }
+        }
     }
 }
