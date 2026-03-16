@@ -26,9 +26,11 @@ pipeline {
             steps{
                 script{
                     echo " we need to perform static code analysis here"
-                    sh ''' mvn sonar:sonar \\
-                        -Dsonar:host.url= http://98.87.156.107:9000/ \\
-                        -Dsonar:host.login= sqa_2322cf3fbe6134f8bab1ebe1dcaae1e8a4931eaa '''
+                    sh ''' sonar-scanner \\
+                        -Dsonar.projectKey=node-ci-cd \\
+                        -Dsonar.sources=. \\
+                        -Dsonar.host.url= http://98.87.156.107:9000/ \\
+                        -Dsonar.login=sqa_2322cf3fbe6134f8bab1ebe1dcaae1e8a4931eaa '''
                 }
             }
         }
