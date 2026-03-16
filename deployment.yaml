@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: node-image
-          image:
+          image: vinod5982/node-image:latest
           ports:
             - containerPort: 3000
           resources:
