@@ -30,7 +30,7 @@ pipeline {
                     sh ''' sonar-scanner \\
                         -Dsonar.projectKey=node-ci-cd \\
                         -Dsonar.sources=. \\
-                        -Dsonar.host.url= http://98.87.156.107:9000 \\
+                        -Dsonar.host.url=http://98.87.156.107:9000 \\
                         -Dsonar.login=sqa_3be775a69344ffb4c6e99ff7fc7320de94308549 '''
                     }
                 }
